@@ -34,8 +34,7 @@ class RemovalGameTest {
 				.mapToLong(Long::parseLong)
 				.toArray();
 
-		RemovalGame game = new RemovalGame();
-		long actualOutput = game.maxScore(numbers);
+		long actualOutput = RemovalGame.maxScore(numbers);
 
 		assertEquals(Long.parseLong(expectedOutput), actualOutput,
 				String.format("Failed for input file: %s", inputFile));

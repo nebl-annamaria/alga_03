@@ -1,6 +1,22 @@
-public class RemovalGame {
+import java.util.Arrays;
+import java.util.Scanner;
 
-	public long maxScore(long[] numbers) {
+public class RemovalGame {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int q = sc.nextInt();
+		sc.nextLine();
+
+		String line = sc.nextLine();
+
+		String[] digits = line.split(" ");
+		long[] numbers = Arrays.stream(digits).mapToLong(Long::parseLong).toArray();
+
+		System.out.println(RemovalGame.maxScore(numbers));
+	}
+
+	public static long maxScore(long[] numbers) {
 		int n = numbers.length;
 		long[][] dp = new long[n][n];
 
